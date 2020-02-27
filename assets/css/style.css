@@ -1,0 +1,28 @@
+@font-face {
+        font-family: STARWARS;
+        src: url(../fonts/STARWARS.TTF);
+    }
+
+body{
+    background: url(../images/bg.jpg);
+    color: whitesmoke;
+}
+
+h1{
+    font-family: STARWARS;
+   
+}
+
+img{
+    padding: 5px;
+    max-width: 200px;
+    max-height: 200px;
+    min-width: 200px;
+    min-height: 200px;
+}
+
+[side~="light"]{
+    border: 3px solid whitesmoke;
+}
+  
+
