@@ -21,28 +21,49 @@ $(".pickside").on("click", function(){
  else if($(this).attr("side")==="dark"){
 
     $("#yourChar").html("<h2>Choose your fighter</h2>")
-    $("#yourChar").append("<img src='./assets/images/vader.jpg'>")
-    $("#yourChar").append("<img src='./assets/images/maul.jpg'>")
-    $("#yourChar").append("<img src='./assets/images/sidious.jpg'>")
-    $("#yourChar").append("<img src='./assets/images/kylo.jpg'>")
+    $("#yourChar").append("<img src='./assets/images/vader.jpg' id='vader'>")
+    $("#yourChar").append("<img src='./assets/images/maul.jpg' id='maul'>")
+    $("#yourChar").append("<img src='./assets/images/sidious.jpg' id='sidious'>")
+    $("#yourChar").append("<img src='./assets/images/kylo.jpg' id='kylo'>")
     $("img").addClass("emp")
 
  }
     
- if($("img").id === "han"){
+});
 
-    $("#yourChar").html("<h2>Your fighter</h2>")
-    $("#yourChar").append("<img src='./assets/images/han.jpg' id='han'>")
-    $("#enemies").html("<h2>Enemies</h2>")
-    $("#yourChar").append("<img src='./assets/images/vader.jpg'>")
-    $("#yourChar").append("<img src='./assets/images/maul.jpg'>")
-    $("#yourChar").append("<img src='./assets/images/sidious.jpg'>")
-    $("#yourChar").append("<img src='./assets/images/kylo.jpg'>")
- }
+$(document).on("click",".reb",function(){
+
+   console.log("a fighter was selected")
+   console.log($(this).attr("id"))
 
 
-})
+      $("#yourChar").html("<h2>Your fighter</h2>")
+      $("#yourChar").append(this)
+      $("#enemies").html("<h2>Enemies</h2>")
+      $("#enemies").append("<img src='./assets/images/vader.jpg'>")
+      $("#enemies").append("<img src='./assets/images/maul.jpg'>")
+      $("#enemies").append("<img src='./assets/images/sidious.jpg'>")
+      $("#enemies").append("<img src='./assets/images/kylo.jpg'>")
+   
 
+});
+
+$(document).on("click",".emp",function(){
+
+   console.log("a fighter was selected")
+   console.log($(this).attr("id"))
+
+  
+
+      $("#yourChar").html("<h2>Your fighter</h2>")
+      $("#yourChar").append(this)
+      $("#enemies").html("<h2>Enemies</h2>")
+      $("#enemies").append("<img src='./assets/images/han.jpg' id='han'>")
+      $("#enemies").append("<img src='./assets/images/luke.jpg' id='luke'>")
+      $("#enemies").append("<img src='./assets/images/obi.jpg'id='obi'>")
+      $("#enemies").append("<img src='./assets/images/yoda.jpg' id='yoda'>")
+  
+});
 //on click of char display game layout
     //chosen char to yourChar div
     // enemies to enemies div
