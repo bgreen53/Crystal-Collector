@@ -19,10 +19,22 @@ img{
     max-height: 200px;
     min-width: 200px;
     min-height: 200px;
+    
 }
 
 [side~="light"]{
     border: 3px solid whitesmoke;
 }
+
+[side~="dark"]{
+    border: 3px solid rgb(156, 7, 7);
+}
   
+.card{
+    width: 13rem;
+    float: left;
+    margin: 2px;
+    color: rgb(62, 123, 236);
+}
+
 
